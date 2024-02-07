@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Thyroid</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="../static/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="../static/assets/css/templatemo-woox-tra.css">
+    <link rel="stylesheet" href="../static/assets/css/owl.css">
+    <link rel="stylesheet" href="../static/assets/css/animate.css">
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+<!--
+
+TemplateMo 580 Woox Travel
+
+https://templatemo.com/tm-580-woox-travel
+
+-->
+  </head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="index.html" class="logo">
+                        <img src="../static/assets/images/logo.png" alt="">
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                       <li><a href="{{url_for('index')}}" class="active">Home</a></li>
+                        <li><a href="{{url_for('login')}}">Login</a></li>
+						 <li><a href="{{url_for('preview')}}">Preview</a></li>
+						  <li><a href="{{url_for('prediction')}}">Prediction</a></li>
+						  	   <li><a href="{{url_for('performance')}}">Performance_Analysis</a></li>
+                    </ul>   
+               
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <div class="page-heading">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+        <h1>Efficient Thyroid Disease Prediction</h1>
+          <h2>Prediction</h2>
+  
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 
+
+  <div class="amazing-deals">
+    <div class="container">
+      <div class="row">
+      
+         
+		 
+		   <div class="section-header">
+            
+           <form action="{{ url_for('predict')}}" method="POST">
+		<div class="section-title">
+     
+ 
+        </div>
+            <div class="scrollable">
+			
+               <center>     <table> </center> 
+			   
+				<h1>Prediction</h1>
+                    
+					 
+					 
+                        <td>age:</td>
+                        <td>
+                            <input type="text" name="age" method="post" required="required" placeholder="age" width="300" style="width: 300px"/>
+                                 
+							    
+						       
+                        </td>
+			 
+						 
+						 <td>sex:</td>
+                        <td>
+                            <select type="text" name="sex" method="post" required="required" placeholder="sex" width="300" style="width: 300px">
+                               
+							       <option value="0">Female</option>
+						      <option value="1">Male</option> 
+							  
+							 
+						      
+							   
+							   
+							   
+							   
+                            </select>
+                        </td>
+						
+						 </tbody>
+                    <!-- Row 1 -->
+                    <tbody>
+                          <td>on_thyroxine:</td>
+                        <td>
+                            <select type="text" name="on_thyroxine" method="post" required="required" placeholder="on_thyroxine" width="300" style="width: 300px">
+                               
+							       <option value="0">False</option>
+						      <option value="1">True</option> 
+							  
+							 
+						      
+							   
+							   
+							   
+							   
+                            </select>
+                        </td>
+					 
+						 <td>query_on_thyroxine:</td>
+                        <td>
+                            <select type="text" name="query_on_thyroxine" method="post" required="required" placeholder="query_on_thyroxine" width="300" style="width: 300px">
+                               <option value="0">False</option>
+						      <option value="1">True</option> 
+							  
+							  
+							 
+						      
+							   
+							   
+							   
+							   
+                            </select>
+                        </td>
+						
+                    </tbody>
+					</br>
+                    <!-- Row 2 -->
+                    <tbody>
+                        <td>on_antithyroid_medication:</td>
+                        <td>
+                            <select type="text" name="on_antithyroid_medication" method="post" required="required" placeholder="on_antithyroid_medication" width="300" style="width: 300px">
+                               
+							          <option value="0">False</option>
+						      <option value="1">True</option> 
+							  
+							  
+							 
+						      
+							   
+							   
+							   
+							   
+                            </select>
+                        </td>
+                        <td>sick:</td>
+                        <td>
+                            <select type="text" name="sick" method="post" required="required" placeholder="sick" width="300" style="width: 300px">
+                             <option value="0">False</option>
+						      <option value="1">True</option> 
+							  
+						       
+   
+								 
+                            </select>
+                        </td>
+                    </tbody>
+					</br>
+                    <!-- Row 3 -->
+                    <tbody>
+                        <td>pregnant:</td>
+                        <td>
+                            <select type="text" name="pregnant" method="post" required="required" placeholder="pregnant" width="300" style="width: 300px">
+                               
+							       <option value="0">False</option>
+						      <option value="1">True</option> 
+							  
+							  
+							 
+						      
+							   
+							   
+							   
+							   
+                            </select>
+                        </td>
+                        <td>thyroid_surgery:</td>
+                        <td>
+                            <select type="text" name="thyroid_surgery" method="post" required="required" placeholder="thyroid_surgery" width="300" style="width: 300px">
+                            <option value="0">False</option>
+						      <option value="1">True</option> 
+							   
+						       
+   
+								 
+                            </select>
+                        </td>
+                    </tbody>
+                    <!-- Row 4 --></br>
+                    <tbody>
+                         <td>I131_treatment :</td>
+                        <td>
+                            <select type="text" name="I131_treatment " method="post" required="required" placeholder="I131_treatment " width="300" style="width: 300px">
+                               
+							        <option value="0">False</option>
+						      <option value="1">True</option> 
+							  
+							 
+						      
+							   
+							   
+							   
+							   
+                            </select>
+                        </td>
+						 
+						   <td>query_hypothyroid:</td>
+                        <td>
+                            <select type="text" name="query_hypothyroid" method="post" required="required" placeholder="query_hypothyroid" width="300" style="width: 300px">
+                               
+							        <option value="0">False</option>
+						      <option value="1">True</option> 
+							  
+							  
+							 
+						      
+							   
+							   
+							   
+							   
+                            </select>
+                        </td>
+						 </tbody>
+						 
+						 <tbody>
+						 <td>query_hyperthyroid:</td>
+                        <td>
+                            <select type="text" name="query_hyperthyroid" method="post" required="required" placeholder="query_hyperthyroid" width="300" style="width: 300px">
+                               
+				    <option value="0">False</option>
+						      <option value="1">True</option> 
+							  
+							  
+							 
+						      
+							   
+							   
+							   
+							   
+                            </select>
+                        </td>
+			 
+						 <td>lithium:</td>
+                        <td>
+                            <select type="text" name="lithium" method="post" required="required" placeholder="lithium" width="300" style="width: 300px">
+                               
+						    <option value="0">False</option>
+						      <option value="1">True</option> 
+							  
+							 
+						      
+							   
+							   
+							   
+							   
+                            </select>
+                        </td>
+                    </tbody>
+                    <!-- Row 5 --></br>
+                   
+  <tbody>
+                          <td>goitre:</td>
+                        <td>
+                            <select type="text" name="goitre" method="post" required="required" placeholder="goitre" width="300" style="width: 300px">
+                               
+							         <option value="0">False</option>
+						      <option value="1">True</option> 
+							  
+							  
+							 
+						      
+							   
+							   
+							   
+							   
+                            </select>
+                        </td>
+				 
+						 <td>tumor:</td>
+                        <td>
+                            <select type="text" name="tumor" method="post" required="required" placeholder="tumor" width="300" style="width: 300px">
+                         <option value="0">False</option>
+						      <option value="1">True</option> 
+							  
+							  
+							 
+						      
+							   
+							   
+							   
+							   
+                            </select>
+                        </td>
+						
+                    </tbody>
+					  <tbody>
+                          <td>hypopituitary:</td>
+                        <td>
+                            <select type="text" name="hypopituitary" method="post" required="required" placeholder="hypopituitary" width="300" style="width: 300px">
+                       <option value="0">False</option>
+						      <option value="1">True</option> 
+							  
+							 
+						      
+							   
+							   
+							   
+							   
+                            </select>
+                        </td>
+					 
+						 <td>psych:</td>
+                        <td>
+                            <select type="text" name="psych" method="post" required="required" placeholder="psych" width="300" style="width: 300px">
+                               
+							     <option value="0">False</option>
+						      <option value="1">True</option> 
+							  
+							  
+							 
+						      
+							   
+							   
+							   
+							   
+                            </select>
+                        </td>
+						
+                    </tbody>
+                   </br>
+
+ 	<tbody>
+                    
+				 
+					 
+                        <td>TSH:</td>
+                        <td>
+                            <input type="text" name="TSH" method="post" required="required" placeholder="TSH" width="300" style="width: 300px"/>
+                                 
+							    
+						       
+                        </td>
+			 
+						 
+						  <td>T3:</td>
+                        <td>
+                            <input type="text" name="T3" method="post" required="required" placeholder="T3" width="300" style="width: 300px"/>
+                                 
+							    
+						       
+                        </td>
+						
+						 </tbody>
+						 <tbody>
+                    
+						 
+					 
+                        <td>TT4:</td>
+                        <td>
+                            <input type="text" name="TT4" method="post" required="required" placeholder="TT4" width="300" style="width: 300px"/>
+                                 
+							    
+						       
+                        </td>
+			 
+						 
+						  <td>T4U:</td>
+                        <td>
+                            <input type="text" name="T4U" method="post" required="required" placeholder="T4U" width="300" style="width: 300px"/>
+                                 
+							    
+						       
+                        </td>
+						
+						 </tbody>
+						 <tbody>
+                     
+					 
+                        <td>FTI:</td>
+                        <td>
+                            <input type="text" name="FTI" method="post" required="required" placeholder="FTI" width="300" style="width: 300px"/>
+                                 
+							    
+						       
+                        </td>
+					 
+						
+						 </tbody>
+					
+                </table>
+				</br>
+				</br>
+                <div class="center">
+                  <center>  <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button> </center> 
+                </div>
+            </div>
+        </form>
+		</br>
+		<h1>Prediction is:{{ prediction_text }}</h1>
+		   
+		   
+		   
+		   
+		   
+        </div>
+		 
+		 
+		 
+		 
+		 
+      </div>
+    </div>
+  </div>
+</br>
+</br>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+   <!-- Bootstrap core JavaScript -->
+   <script src="../static/vendor/jquery/jquery.min.js"></script>
+   <script src="../static/vendor/bootstrap/js/bootstrap.min.js"></script>
+ 
+   <script src="../static/assets/js/isotope.min.js"></script>
+   <script src="../static/assets/js/owl-carousel.js"></script>
+   <script src="../static/assets/js/wow.js"></script>
+   <script src="../static/assets/js/tabs.js"></script>
+   <script src="../static/assets/js/popup.js"></script>
+   <script src="../static/assets/js/custom.js"></script>
+ 
+
+  <script>
+    $(".option").click(function(){
+      $(".option").removeClass("active");
+      $(this).addClass("active"); 
+    });
+  </script>
+
+  </body>
+
+</html>

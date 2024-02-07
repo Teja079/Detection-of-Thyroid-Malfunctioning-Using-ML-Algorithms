@@ -1,0 +1,7 @@
+Efficient Thyroid Disease Prediction using Features Selection and Meta-Classifiers.
+
+Algorithm / Model Used: Decision Tree Classifier.
+
+Train Accuracy: 1.00
+Test Accuracy: 0.97
+
